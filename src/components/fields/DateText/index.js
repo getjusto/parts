@@ -1,7 +1,12 @@
 import React from 'react'
 import autobind from 'autobind-decorator'
 import PropTypes from 'prop-types'
-import dayjs from 'dayjs'
+
+const dayjs = global.dayjs
+
+if (!dayjs) {
+  throw new Error('Dayjs is required in global variable')
+}
 export default class DateTextField extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
