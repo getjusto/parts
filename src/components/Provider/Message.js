@@ -54,24 +54,24 @@ export default class WithMessage extends React.Component {
         if (graphError.error === 'validationError') {
           this.show(this.getValidationErrorString(graphError), {
             level: 'error',
-            options,
+            ...options,
           })
         } else {
           this.show(graphError.message, {
             level: 'error',
-            options,
+            ...options,
           })
         }
       }
     } else if (message.message) {
       this.show(message.message, {
         level: 'error',
-        options,
+        ...options,
       })
     } else {
       this.show(message, {
         level: 'error',
-        options,
+        ...options,
       })
     }
   }
