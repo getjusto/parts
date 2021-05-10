@@ -78,6 +78,11 @@ export default class WithMessage extends React.Component {
 
   getStyle() {
     return {
+      Containers: {
+        DefaultStyle: {
+          zIndex: 10001,
+        },
+      },
       NotificationItem: {
         DefaultStyle: {
           margin: '10px 5px 2px 1px',
